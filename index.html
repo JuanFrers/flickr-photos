@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Photos</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="photos.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -9,11 +11,19 @@
     
     <div id="photos"></div>
 
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="favoriteButton.js"></script>
+    <script type="text/javascript" src="persistenceManager.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <script src="photos.js"></script>
+
+
     <script>
     setupPhotos(['squirrel', 'cat'], function (err, result) {
         if (err) { return console.error(err); }
+        setTimeout(function () {
+	       decorateImages();
+        },0);
     });
     </script>
   </body>

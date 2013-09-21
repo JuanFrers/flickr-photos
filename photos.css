@@ -20,3 +20,8 @@ body {
     min-width: 160px;
     max-width: 240px;
 }
+
+.favorite-button {
+	display: block;
+	margin: 14px auto auto;
+}
